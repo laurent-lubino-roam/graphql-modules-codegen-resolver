@@ -1,0 +1,10 @@
+import { {{pascalCase name}}Module } from '../generated-types/module-types';
+import {{pascalCase name}}Provider from '../providers/{{camelCase name}}.provider';
+
+export const resolvers: {{pascalCase name}}Module.Resolvers = {
+  Query: {
+    get{{pascalCase name}}ById: async (root, { id }, { injector }) => {
+      return (await injector.get({{pascalCase name}}Provider).get{{pascalCase name}}ById(id)) ?? null;
+    },
+  },
+};

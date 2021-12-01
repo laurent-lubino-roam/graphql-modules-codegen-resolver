@@ -1,0 +1,7 @@
+type Query {
+  empty: Boolean
+}
+
+type Mutation {
+  empty: Boolean
+}

@@ -1,0 +1,21 @@
+import { RESTDataSource } from 'apollo-datasource-rest';
+import { Injectable, Scope } from 'graphql-modules';
+
+@Injectable({
+  scope: Scope.Operation,
+})
+export default class {{pascalCase name}}Provider extends RESTDataSource {
+  constructor() {
+    // Always call super()
+    super();
+    // Sets the base URL for the REST API
+    this.baseURL = process.env['{{constantCase name}}_API_URL'];
+    // need to initialise
+    this.initialize({} as any);
+  }
+
+  async get{{pascalCase name}}ById(id: string) {
+    // Send a GET request to the specified endpoint
+    return this.get(`/${id}`);
+  }
+}

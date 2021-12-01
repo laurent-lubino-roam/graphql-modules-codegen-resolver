@@ -1,0 +1,63 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "main": "./src/server.ts",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "test": "jest --collect-coverage",
+    "build": "tsc",
+    "generate": "gql-gen",
+    "dev": "concurrently \"nodemon\" \"npm:generate -- --watch\"",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.0.1",
+    "@graphql-codegen/graphql-modules-preset": "2.0.1",
+    "@graphql-codegen/introspection": "2.1.0",
+    "@graphql-codegen/typescript-resolvers": "2.0.0",
+    "@graphql-eslint/eslint-plugin": "2.0.1",
+    "@types/graphql-depth-limit": "1.1.3",
+    "@types/jest": "27.0.2",
+    "@types/node": "16.4.13",
+    "@typescript-eslint/eslint-plugin": "4.19.0",
+    "@typescript-eslint/parser": "4.19.0",
+    "apollo": "2.33.6",
+    "concurrently": "6.2.1",
+    "dotenv": "10.0.0",
+    "eslint": "7.22.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "jest": "27.2.4",
+    "jest-transform-graphql": "2.1.0",
+    "nodemon": "2.0.12",
+    "plop": "2.7.4",
+    "prettier": "2.3.2",
+    "ts-jest": "27.0.5",
+    "ts-node": "10.2.0",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.3.5"
+  },
+  "dependencies": {
+    "@graphql-modules/core": "0.7.17",
+    "@graphql-modules/di": "0.7.17",
+    "@graphql-tools/load-files": "6.3.2",
+    "@graphql-tools/merge": "7.0.0",
+    "@graphql-tools/utils": "8.0.2",
+    "apollo-datasource-rest": "3.2.0",
+    "apollo-server": "3.1.2",
+    "apollo-server-express": "3.1.2",
+    "express": "4.17.1",
+    "graphql": "15.5.1",
+    "graphql-depth-limit": "1.1.0",
+    "graphql-import-node": "0.0.4",
+    "graphql-modules": "1.4.4",
+    "graphql-voyager": "1.0.0-rc.31",
+    "node-fetch": "3.0.0",
+    "reflect-metadata": "0.1.13"
+  },
+  "volta": {
+    "node": "16.3.0"
+  }
+}

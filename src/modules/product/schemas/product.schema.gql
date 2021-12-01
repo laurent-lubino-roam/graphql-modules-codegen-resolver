@@ -1,0 +1,39 @@
+extend type Query {
+  getMyProducts: [Product!]!
+  getProductById(id: ID!): Product
+}
+
+input SearchInput {
+  text: String
+}
+
+enum ProductType {
+  CAR
+  SHOE
+}
+
+interface ProductBase {
+  id: ID!
+  type: ProductType!
+  price: Float!
+}
+
+type Car implements ProductBase {
+  id: ID!
+  type: ProductType!
+  price: Float!
+  brand: String!
+  model: String!
+  odometerKms: Int
+}
+
+type Shoe implements ProductBase {
+  id: ID!
+  type: ProductType!
+  price: Float!
+  brand: String!
+  model: String!
+  sizes: [Float!]!
+}
+
+union Product = Car | Shoe

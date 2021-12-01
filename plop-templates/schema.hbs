@@ -1,0 +1,7 @@
+extend type Query {
+    get{{pascalCase name}}ById(id: ID!): {{pascalCase name}}
+}
+
+type {{pascalCase name}} {
+    id: ID!
+}
