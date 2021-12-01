@@ -10,10 +10,10 @@ Error can be experienced by playing with this repo (`Product.resolver.ts`). Plea
 
 See image bellow for better description.
 
-![Typescript issue](./doc/typescript-issue.jpg?raw=true 'Typescript issue')
+![Typescript issue](./doc/typescript-issue.png?raw=true 'Typescript issue')
 
-![Types created](./doc/types-well-created.jpg?raw=true 'Types created')
+![Types created](./doc/types-well-created.png?raw=true 'Types created')
 
-![Types not added](./doc/types-not-added.jpg?raw=true 'But Types not added')
+![Types not added](./doc/types-not-added.png?raw=true 'But Types not added')
 
-![Typescript wrongly error](./doc/typescript-ignored-working.jpg?raw=true 'Typescript error wrongly because working as expected')
+![Typescript wrongly error](./doc/typescript-ignored-working.png?raw=true 'Typescript error wrongly because working as expected')
